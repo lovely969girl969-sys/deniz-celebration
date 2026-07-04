@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deniz Celebration</title>
+    <style>
+        /* New Luxury Emerald & Gold Color Palette */
+        :root {
+            --bg-hero: #0d2e27;          /* Deep Emerald Green */
+            --bg-story: #f7f9f6;         /* Off-White / Soft Sage Tint */
+            --bg-banner: #dfd3c3;        /* Soft Warm Cream */
+            --bg-services: #164a3f;      /* Medium Emerald */
+            --bg-portfolio: #fffcf7;     /* Warm Alabaster */
+            --bg-testimonials: #1b5347;  /* Balanced Emerald */
+            --bg-social: #f0e6d2;       /* Light Champagne Gold */
+            --bg-footer: #111111;
+            --text-dark: #1a2421;
+            --text-light: #ffffff;
+            --accent-gold: #d4af37;      /* Classic Gold */
+            --btn-light: #f7f9f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', 'Georgia', serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            font-size: 1rem;
+        }
+
+        .btn-round {
+            display: inline-block;
+            background-color: var(--btn-light);
+            color: var(--bg-hero);
+            padding: 12px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-round:hover {
+            transform: translateY(-2px);
+            background-color: var(--accent-gold);
+            color: var(--text-light);
+        }
+
+        /* 1. Hero Section */
+        .hero {
+            background-color: var(--bg-hero);
+            color: var(--text-light);
+            padding: 120px 20px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+        }
+        .hero .subtitle {
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+
+        /* 2. My Story Section */
+        .story {
+            background-color: var(--bg-story);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .story h2 {
+            font-size: 2.5rem;
+            color: var(--bg-hero);
+        }
+
+        /* 3. Text Banner Quote */
+        .quote-banner {
+            background-color: var(--bg-banner);
+            padding: 50px 20px;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--bg-hero);
+        }
+
+        /* 4. What I Can Do For You (Services) */
+        .services {
+            background-color: var(--bg-services);
+            color: var(--text-light);
+        }
+        .services h2 {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+        }
+        .service-list {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: right;
+            direction: rtl; 
+        }
+        .service-item {
+            margin-bottom: 25px;
+        }
+        .service-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            border-bottom: 1px solid var(--accent-gold);
+            padding-bottom: 5px;
+            color: var(--accent-gold);
+        }
+
+        /* 5. Portfolio Section */
+        .portfolio {
+            background-color: var(--bg-portfolio);
+        }
+        .portfolio h2 {
+            font-size: 2.5rem;
+            color: var(--bg-hero);
+        }
+        .portfolio-grid {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .portfolio-card {
+            background: #ffffff;
+            width: 300px;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .portfolio-card h3 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--bg-services);
+        }
+        .btn-black {
+            display: inline-block;
+            background-color: var(--bg-hero);
+            color: #ffffff;
+            padding: 10px 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
+        .btn-black:hover {
+            background-color: var(--accent-gold);
+        }
+
+        /* 6. Testimonials Section */
+        .testimonials {
+            background-color: var(--bg-testimonials);
+            color: var(--text-light);
+        }
+        .testimonials h2 {
+            color: var(--accent-gold);
+        }
+        .testimonial-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .testimonial-block {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 450px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 6px;
+        }
+        .testimonial-img {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255,255,255,0.2); 
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* 7. Social Media Section */
+        .social-media {
+            background-color: var(--bg-social);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .social-media h2 {
+            font-size: 3rem;
+            max-width: 400px;
+            line-height: 1.1;
+            color: var(--bg-hero);
+        }
+        .social-box {
+            background-color: var(--bg-services);
+            padding: 30px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 350px;
+            text-align: left;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-family: sans-serif;
+            transition: color 0.2s;
+        }
+        .social-link:hover {
+            color: var(--accent-gold);
+        }
+        .social-link:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 8. Footer */
+        footer {
+            background-color: var(--bg-footer);
+            color: #888888;
+            padding: 20px;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .story {
+                flex-direction: row;
+                justify-content: space-around;
+                text-align: left;
+                padding: 90px 100px;
+            }
+            .story h2 { margin-right: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Hero Section -->
+    <section class="hero">
+        <h1>Deniz Celebration</h1>
+        <p class="subtitle">Toutes les occasions méritent d'être célébrées</p>
+        <a href="#services" class="btn-round">Explore my services</a>
+    </section>
+
+    <!-- 2. My Story Section -->
+    <section class="story">
+        <h2>My story</h2>
+        <p>Chez Deniz Celebration, nous mettons notre savoir-faire au service de vos plus beaux événements. Chocolats et bonbons artisanaux préparés avec soin pour sublimer vos mariages, fiançailles, et toutes vos célébrations spéciales.</p>
+    </section>
+
+    <!-- 3. Quote Banner -->
+    <div class="quote-banner">
+        "Write with purpose, edit with precision, deliver with personality."
+    </div>
+
+    <!-- 4. What I Can Do For You -->
+    <section id="services" class="services">
+        <h2>What I can do for you</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>التوزيعات :</h3>
+                <p>صنع علب شوكولاتة وهدايا مخصصة لجميع المناسبات السعيدة</p>
+            </div>
+            <div class="service-item">
+                <h3>Dattes Fourrées :</h3>
+                <p>تمر برستيج ومحشو بمكونات وجودة عالية</p>
+            </div>
+            <div class="service-item">
+                <h3>Dragées et chocolat :</h3>
+                <p>تشكيلة فاخرة من الشوكولاتة والملبس الفرنسي</p>
+            </div>
+        </div>
+        <a href="#contact" class="btn-round">Get in touch</a>
+    </section>
+
+    <!-- 5. Portfolio Section -->
+    <section class="portfolio">
+        <h2>A few things I'm proud of</h2>
+        <p>أشياء أنا فخورة بها</p>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <h3>الانتشار</h3>
+                <p>يوميات وإنجازات، خدمات أكثر من رائعة لكسب ثقة العملاء</p>
+                <!-- REPLACE THE '#' BELOW WITH YOUR LIVE PROJECT LINK -->
+                <a href="https://yourwebsite.com/project1" class="btn-black">View project</a>
+            </div>
+            <div class="portfolio-card">
+                <h3>ردود الفعل</h3>
+                <p>أشخاص وثقوا بخدماتنا، يسعدنا دائماً سماع آرائهم الإيجابية</p>
+                <!-- REPLACE THE '#' BELOW WITH YOUR LIVE PROJECT LINK -->
+                <a href="https://yourwebsite.com/project2" class="btn-black">View project</a>
+            </div>
+            <div class="portfolio-card">
+                <h3>تصاميمي</h3>
+                <p>New secret design<br>ابتكار تصاميم مميزة وفريدة لكل عميل ليكون يومه لا ينسى</p>
+                <!-- REPLACE THE '#' BELOW WITH YOUR LIVE PROJECT LINK -->
+                <a href="https://yourwebsite.com/project3" class="btn-black">View project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Testimonials Section -->
+    <section class="testimonials">
+        <h2>What clients say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-block">
+                <div class="testimonial-img"></div>
+                <div>
+                    <p>"كانت الشوكولاتة والتغليف قمة في الروعة، الكل سألني عنها شكراً جزيلاً لسرعة التعامل والذوق!"</p>
+                    <strong style="color: var(--accent-gold);">les mariés Y et H</strong>
+                </div>
+            </div>
+            <div class="testimonial-block">
+                <div class="testimonial-img"></div>
+                <div>
+                    <p>"التمر محشي بحشوات مبتكرة ولذيذة جداً، بيضتولي وجهي قدام ضيوفي الله يوفقكم"</p>
+                    <strong style="color: var(--accent-gold);">les mariés H et D</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Social Media Section -->
+    <section id="contact" class="social-media">
+        <h2>FIND ME IN SOCIAL MEDIA</h2>
+        <p>تابعوني على مواقع التواصل الاجتماعي</p>
+        
+        <div class="social-box">
+            <!-- REPLACE THE '#' LINKS BELOW WITH YOUR REAL SOCIAL PROFILE LINKS -->
+            <a href="https://www.tiktok.com/@yourprofile" target="_blank" class="social-link"><span>🎵</span> @deniz.celebration</a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-link"><span>📸</span> @deniz_celebration</a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-link"><span>👍</span> Deniz Celebration</a>
+        </div>
+    </section>
+
+    <!-- 8. Footer -->
+    <footer>
+        <p>© 2026 Deniz Celebration</p>
+    </footer>
+
+</body>
+</html>
