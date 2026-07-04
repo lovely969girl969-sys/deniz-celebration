@@ -211,9 +211,14 @@
         .testimonial-img {
             width: 100px;
             height: 100px;
-            background-color: rgba(0,0,0,0.05); 
             border-radius: 50%;
             flex-shrink: 0;
+            overflow: hidden;
+        }
+        .testimonial-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* 7. Social Media Section */
@@ -276,6 +281,18 @@
             }
             .story h2 { margin-right: 40px; }
         }
+        
+        /* Unique styling for top banner logo block layout */
+        .hero-logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .hero-logo-container .testimonial-img {
+            width: 120px;
+            height: 120px;
+            border: 3px solid var(--accent-rose);
+        }
     </style>
 </head>
 <body>
@@ -283,19 +300,22 @@
     <!-- 1. Hero Section -->
     <section class="hero">
         <h1>Deniz Celebration</h1>
-             <div class="testimonial-block">
-                <div class="testimonial-img">
-                  <img src="C:\Users\DELL\Desktop\index/logo_pic.jpg" alt=Client portrait" />
-                </div>
+        
+        <div class="hero-logo-container">
+            <div class="testimonial-img">
+                <img src="index/logo_pic.jpg" alt="Client portrait" />
+            </div>
+        </div>
+        
         <p class="subtitle">Toutes les occasions méritent d'être célébrées</p>
         <a href="#services" class="btn-round">Explore my services</a>
-        <a href="index.html"> Home</a>
+        <a href="index.html" class="btn-round" style="margin-left: 10px;">Home</a>
     </section>
 
     <!-- 2. My Story Section -->
     <section class="story">
         <h2>My story</h2>
-        <p>Chez Deniz Celebration, nous metons notre savoir-faire au service de vos plus beaux événements. Chocolats et bonbons artisanaux préparés avec soin pour sublimer vos mariages, fiançailles, et toutes vos célébrations spéciales.</p>
+        <p>Chez Deniz Celebration, nous mettons notre savoir-faire au service de vos plus beaux événements. Chocolats et bonbons artisanaux préparés avec soin pour sublimer vos mariages, fiançailles, et toutes vos célébrations spéciales.</p>
     </section>
 
     <!-- 3. Quote Banner -->
@@ -309,7 +329,7 @@
         <div class="service-list">
             <div class="service-item">
                 <h3>التوزيعات :</h3>
-                <p>توزيعات .  عرس  . حنة  .  ختان . تخرج  . خطوبة . مولود جديد</p>
+                <p>توزيعات . عرس . حنة . ختان . تخرج . خطوبة . مولود جديد</p>
             </div>
             <div class="service-item">
                 <h3>Dattes Fourrées :</h3>
@@ -326,26 +346,25 @@
     <!-- 5. Portfolio Section -->
     <section class="portfolio">
         <h2>A few things I'm proud of</h2>
-        <p> <h3> أشياء أنا فخورة بها</h3></p>
-
+        <h3>أشياء أنا فخورة بها</h3>
     
         <div class="portfolio-grid">
             <div class="portfolio-card">
                 <h3>الانتشار</h3>
                 <p>يوميات وإنجازات، خدمات أكثر من رائعة لكسب ثقة العملاء</p>
                 <br/>
-                <a href="https://www.instagram.com/reel/DaWFj7vxlcs/?igsh=MTBmbG1wZDR3dXY2MA==" class="btn-black">View project</a>
+                <a href="https://www.instagram.com/reel/DaWFj7vxlcs/?igsh=MTBmbG1wZDR3dXY2MA==" target="_blank" class="btn-black">View project</a>
             </div>
             <div class="portfolio-card">
                 <h3>ردود الفعل</h3>
                 <p>أشخاص وثقوا بخدماتنا، يسعدنا دائماً سماع آرائهم الإيجابية</p>
                 <br/>
-                <a href="https://www.instagram.com/reel/DaTBc-ctmtq/?igsh=NWZsdGo0cHZtdzBs" class="btn-black">View project</a>
+                <a href="https://www.instagram.com/reel/DaTBc-ctmtq/?igsh=NWZsdGo0cHZtdzBs" target="_blank" class="btn-black">View project</a>
             </div>
             <div class="portfolio-card">
                 <h3>تصاميمي</h3>
                 <p>New secret design<br>ابتكار تصاميم مميزة وفريدة لكل عميل ليكون يومه لا ينسى</p>
-                <a href="https://www.instagram.com/p/DaQ-SHZNqOF/?igsh=anQ1ZnNhM2dld2J4" class="btn-black">View project</a>
+                <a href="https://www.instagram.com/p/DaQ-SHZNqOF/?igsh=anQ1ZnNhM2dld2J4" target="_blank" class="btn-black">View project</a>
             </div>
         </div>
     </section>
@@ -356,27 +375,19 @@
         <div class="testimonial-container">
             <div class="testimonial-block">
                 <div class="testimonial-img">
-                  <img src="index/the_flower.jpg" alt=Client portrait" />
+                    <img src="index/the_flower.jpg" alt="Client portrait" />
                 </div>
                 <div>
-                    <p>"صاحبة تصميم الوردة مع قارورة العطر
-                        <br/>
-                          أول إنسانة وثقت فيا و دارت عندي  
-                        <br/>
-                       و الحمد لله  she liked my tawzi'ât"</p>
+                    <p>"صاحبة تصميم الوردة مع قارورة العطر<br/>أول إنسانة وثقت فيا و دارت عندي<br/>و الحمد لله she liked my tawzi'ât"</p>
                     <strong style="color: var(--accent-rose);">les mariés Y et H</strong>
                 </div>
             </div>
             <div class="testimonial-block">
                 <div class="testimonial-img">
-                  <img src="index/the_hd.jpg" alt=Client portrait" />
+                    <img src="index/the_hd.jpg" alt="Client portrait" />
                 </div>
                 <div>
-                    <p>"ثاني طلبية ليا
-                      <br/>
-                     و أيضا خرجت تهبل ماشاء الله
-                      <br/>
-                      كنت عند حسن ظنهم بي و الحمد لله"</p>
+                    <p>"ثاني طلبية ليا<br/>و أيضا خرجت تهبل ماشاء الله<br/>كنت عند حسن ظنهم بي و الحمد لله"</p>
                     <strong style="color: var(--accent-rose);">les mariés H et D</strong>
                 </div>
             </div>
@@ -390,7 +401,7 @@
         
         <div class="social-box">
             <a href="https://www.tiktok.com/@deniz.celebration?_r=1&_t=ZS-97l02TzkbgK" target="_blank" class="social-link"><span>TIK TOK : </span> @deniz.celebration</a>
-            <a href="https://www.instagram.com/deniz_celebration?igsh=MXRzNnQ1NXp6OGd1bQ==" class="social-link"><span>INSTAGRAM : </span> @deniz_celebration</a>
+            <a href="https://www.instagram.com/deniz_celebration?igsh=MXRzNnQ1NXp6OGd1bQ==" target="_blank" class="social-link"><span>INSTAGRAM : </span> @deniz_celebration</a>
             <a href="https://www.facebook.com/share/1B9XgFgAEt/" target="_blank" class="social-link"><span>FACEBOOK : </span> Deniz Celebration</a>
         </div>
     </section>
